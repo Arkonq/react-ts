@@ -1,18 +1,10 @@
 import {FC, useState, ChangeEvent } from 'react';
+import {User} from '../Interfaces';
 
-export enum HairColor {
-  Black = 1, White = 2, Brown = 3,
-}
 
-export interface Props {
-  name: string,
-  age: number,
-  isOld?: boolean,
-  hairColor: HairColor
-}
 
-// export const Person = ({name, age, isOld}: Props) => {
-export const Person: FC<Props> = ({name, age, isOld, hairColor}) => {
+// export const Person = ({name, age, isOld}: Person) => {
+export const Person: FC<User> = ({name, age, isOld, hairColor}) => {
   const [country, setCountry] = useState<string | null>();
 
   type SeveralTypes = "First" | "Second" | "Third";
